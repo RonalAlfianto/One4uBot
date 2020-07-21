@@ -6,6 +6,7 @@
 """ Userbot initialization. """
 
 import os
+import time 
 
 from sys import version_info
 from logging import basicConfig, getLogger, INFO, DEBUG
@@ -19,6 +20,8 @@ from telethon import TelegramClient
 from telethon.sessions import StringSession
 
 load_dotenv("config.env")
+
+StartTime = time.time()
 
 # Bot Logs setup:
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
